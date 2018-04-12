@@ -3,8 +3,9 @@
   "port": 3030,
   "public": "../public/",
   "paginate": {
-    "default": 10,
-    "max": 50
+    "default": 100,
+    "max": 100
   },
-  "mongodb": "mongodb://localhost:27017/interactive_survey_backend"
+  "mongodb": "mongodb://app:app@cluster0-shard-00-00-tg1zu.mongodb.net:27017,cluster0-shard-00-01-tg1zu.mongodb.net:27017,cluster0-shard-00-02-tg1zu.mongodb.net:27017/test?ssl=true&replicaSet=Cluster0-shard-0&authSource=admin"
 }
+

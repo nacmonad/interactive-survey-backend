@@ -9,15 +9,15 @@ async function getInitialResponses(client, responseList) {
   responseList = await client.service('responses').find();
   console.log("app instantiated")
   console.log('Available responses', responseList);
-  
   processResponses(client,responseList);
-  
 }
 
 getInitialResponses(client,responseList);
 
 
-/* Event Listeners */
+/* Event Listeners 
+*  Maintains in-memory copy of DB
+*/
 
 function processResponses(client, responseList) {
   
