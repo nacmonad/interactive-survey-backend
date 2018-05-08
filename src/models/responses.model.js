@@ -12,6 +12,7 @@ module.exports = function (app) {
     scaleC: {type: Number, min: 0, max: 100 },
     scaleD: {type: Number, min: 0, max: 100 },
     group: { type: Number, min: 1, max: 11, required: true },
+    location: { type: String, required: true},
     questionId: {type: Number, min: 1, max: 3, required: true },
     questionType: {type: String, enum: ['text', 'scale'], required: true},
     isReviewed: {type: Boolean, required: true, default: false}

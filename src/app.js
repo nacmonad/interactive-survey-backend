@@ -23,9 +23,12 @@ const app = express(feathers());
 // Load app configuration
 app.configure(configuration());
 // Enable CORS, security, compression, favicon and body parsing
-
+console.log(helmet.frameguard)
 app.use(cors());
-app.use(helmet());
+app.use(helmet.frameguard({
+  action: 'allow-from',
+  domain: 'http://stjoesshapeourstrategy.ca'
+}));
 app.use(compress());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
@@ -41,6 +44,7 @@ app.configure(mongoose);
 
 // Configure other middleware (see `middleware/index.js`)
 app.configure(middleware);
+
 // Set up our services (see `services/index.js`)
 app.configure(services);
 // Set up event channels (see channels.js)
